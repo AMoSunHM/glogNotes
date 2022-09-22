@@ -11,3 +11,12 @@ target_link_libraries(glog
 
     glog::glog
 )
+
+add_executable(test 
+    main2.cc
+    )
+
+target_link_libraries(test
+
+    glog::glog
+)

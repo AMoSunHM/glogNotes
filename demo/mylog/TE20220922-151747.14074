@@ -1,7 +1,0 @@
-Log file created at: 2022/09/22 15:17:47
-Running on machine: casicapollo-System-Product-Name
-Running duration (h:mm:ss): 0:00:00
-Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I20220922 15:17:47.589931 14074 main2.cc:19] info
-W20220922 15:17:47.590467 14074 main2.cc:20] warning
-E20220922 15:17:47.590595 14074 main2.cc:21] error

@@ -1,5 +1,7 @@
 #include "glog/logging.h"
 
+//#include "log/log.h"
+
 int main()
 {
     google::InitGoogleLogging("test");//使用glog之前必须先初始化库，仅需执行一次，括号内为程序名
@@ -11,11 +13,26 @@ int main()
     google::SetLogDestination(google::GLOG_ERROR, "E:\\logs\\ERROR_");  //ERROR级别的日志都存放到logs目录下且前缀为ERROR_
     google::SetLogDestination(google::GLOG_FATAL, "E:\\logs\\FATAL_");  //FATAL级别的日志都存放到logs目录下且前缀为FATAL_
 */
-    google::SetLogDestination(google::GLOG_INFO, "/home/casicapollo/Documents/GitHub/glogNotes/demo/mylog/TE");  //INFO级别的日志都存放到logs目录下且前缀为INFO_
-    google::SetLogDestination(google::GLOG_WARNING, "/home/casicapollo/Documents/GitHub/glogNotes/demo/mylog/TE");  //WARNING级别的日志都存放到logs目录下且前缀为WARNING_
-    google::SetLogDestination(google::GLOG_ERROR, "/home/casicapollo/Documents/GitHub/glogNotes/demo/mylog/TE");  //ERROR级别的日志都存放到logs目录下且前缀为ERROR_
-    google::SetLogDestination(google::GLOG_FATAL, "/home/casicapollo/Documents/GitHub/glogNotes/demo/mylog/TE");  //FATAL级别的日志都存放到logs目录下且前缀为FATAL_
 
+    
+    google::SetLogDestination(google::GLOG_INFO, "/home/casicapollo/Documents/GitHub/glogNotes/logDemo/mylog/");  //INFO级别的日志都存放到logs目录下且前缀为INFO_
+    google::SetLogDestination(google::GLOG_WARNING, "/home/casicapollo/Documents/GitHub/glogNotes/logDemo/mylog/");  //WARNING级别的日志都存放到logs目录下且前缀为WARNING_
+    google::SetLogDestination(google::GLOG_ERROR, "/home/casicapollo/Documents/GitHub/glogNotes/logDemo/mylog/");  //ERROR级别的日志都存放到logs目录下且前缀为ERROR_
+    google::SetLogDestination(google::GLOG_FATAL, "/home/casicapollo/Documents/GitHub/glogNotes/logDemo/mylog/");  //FATAL级别的日志都存放到logs目录下且前缀为FATAL_
+
+    while (1)
+    {
+        LOG(INFO) << "info";
+        LOG(WARNING) << "warning";
+        //LOG(ERROR) << "error";
+        //LOG(FATAL) << "fatal";       
+    }
+/*
+    while (1)
+    {
+        AINFO <<"55";
+    }
+*/    
     LOG(INFO) << "info";
     LOG(WARNING) << "warning";
     LOG(ERROR) << "error";
